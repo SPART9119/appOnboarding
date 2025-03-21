@@ -1,0 +1,39 @@
+Configuration:
+  name: "Log4j2Config"
+  status: warn
+  monitorInterval: 30
+
+  Properties:
+    Property:
+      - name: LOG_PATTERN
+        value: "%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"
+      - name: LOG_PATH
+        value: "logs/app.log"
+
+  Appenders:
+    Console:
+      name: ConsoleAppender
+      target: SYSTEM_OUT
+      PatternLayout:
+        Pattern: "${LOG_PATTERN}"
+
+    File:
+      name: FileAppender
+      fileName: ${LOG_PATH}
+      PatternLayout:
+        Pattern: "${LOG_PATTERN}"
+
+  Loggers:
+    Root:
+      level: info
+      AppenderRef:
+        - ref: ConsoleAppender
+        - ref: FileAppender
+
+    Logger:
+      - name: com.vonage
+        level: debug
+        additivity: false
+        AppenderRef:
+          - ref: ConsoleAppender
+          - ref: FileAppender

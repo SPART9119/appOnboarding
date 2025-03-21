@@ -1,0 +1,29 @@
+Configuration:
+  status: warn
+  monitorInterval: 30
+  Properties:
+    Property:
+      - name: LOG_PATTERN
+        value: "%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"
+      - name: LOG_PATH
+        value: "logs/stage.log"
+
+  Appenders:
+    Console:
+      name: ConsoleAppender
+      target: SYSTEM_OUT
+      PatternLayout:
+        Pattern: "${LOG_PATTERN}"
+
+    File:
+      name: FileAppender
+      fileName: ${LOG_PATH}
+      PatternLayout:
+        Pattern: "${LOG_PATTERN}"
+
+  Loggers:
+    Root:
+      level: warn
+      AppenderRef:
+        - ref: ConsoleAppender
+        - ref: FileAppender

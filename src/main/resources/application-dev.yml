@@ -1,0 +1,13 @@
+saviynt:
+ application:
+  baseurl: http://jsonplaceholder.typicode.com/
+  endpoints: 
+   - name: test-1
+     url: todos/1
+     type: GET
+   - name: test-2
+     url: todos/2
+     type: GET
+   - name: test-3
+     url: todos/3
+     type: GET
