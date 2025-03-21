@@ -17,7 +17,7 @@ public class SaviyntRestController {
     public List<Object> getEndpoints() throws Exception {
         return saviyntRestCall.getEndpoints();
     }
-    // hello
+    
 }
 
 
