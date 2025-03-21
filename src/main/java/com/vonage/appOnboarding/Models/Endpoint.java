@@ -12,4 +12,5 @@ public class Endpoint {
     private String type;
 
     private String response;
+
 }

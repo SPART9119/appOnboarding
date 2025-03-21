@@ -35,7 +35,6 @@ public class AppOnboardingApplication implements CommandLineRunner {
         SpringApplication.run(AppOnboardingApplication.class, args);
     }
 
-
     @Override
     public void run(String... args) throws Exception {
 

@@ -12,6 +12,7 @@ public class RestConfiguration {
     @Autowired
     SaviyntConfiguration saviyntConfiguration;
 
+
     @Bean
     public RestTemplate restTemplate(RestTemplateBuilder builder) {
         return builder.rootUri(saviyntConfiguration.getBaseurl()).build();

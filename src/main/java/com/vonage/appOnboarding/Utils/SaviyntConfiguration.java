@@ -14,7 +14,6 @@ public class SaviyntConfiguration {
     private String baseurl;
 	private List<Endpoint> endpoints;
 
-
 	public String getBaseurl() {
 		return baseurl;
 	}

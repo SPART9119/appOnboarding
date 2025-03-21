@@ -17,5 +17,4 @@ public class RestMethods {
         return restTemplate.getForEntity(url, Object.class);
 
     }
-
 }

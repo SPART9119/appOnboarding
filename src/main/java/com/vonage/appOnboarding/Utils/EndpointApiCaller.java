@@ -45,7 +45,6 @@ public class EndpointApiCaller {
                             " - Status Code: " + ((HttpClientErrorException) errorException).getStatusCode() : "");
             responses.add(errorMessage);
         }
-
         return responses;
     }
 }

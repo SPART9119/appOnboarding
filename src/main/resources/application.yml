@@ -13,6 +13,7 @@ logging:
 csv:
  file:
   path: C:/Users/VS752YJ/Downloads/appOnboarding/appOnboarding/industry.csv
+
 env:
  file:
   path: ${CSV_FILE_PATH}

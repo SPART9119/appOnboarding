@@ -10,11 +10,9 @@ import java.util.List;
 
 @Service
 public class SaviyntRestCallImpl implements SaviyntRestCall {
-
-
-
     @Autowired
     private SaviyntConfiguration saviyntConfiguration;
+
     @Autowired
     private EndpointApiCaller endpointApiCaller;
 
